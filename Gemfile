@@ -16,6 +16,8 @@ gem 'execjs'
 
 gem 'therubyracer'
 
+gem "figaro"
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 

@@ -1,9 +1,13 @@
 class VisitorsController < ApplicationController
-def new
+#  this is to create new owner
+  def new
 
-@owner = Owner.new
-render 'visitors/new'
-end
+    @owner = Owner.new
+  flash.now[:notice] = 'Welcome!'
+  flash.now[:alert] = 'My birthday is soon.'
+
+  
+  end
 end
 
 

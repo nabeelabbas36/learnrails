@@ -18,6 +18,20 @@ gem 'therubyracer'
 
 gem "figaro"
 
+gem 'bootstrap-sass'
+
+gem 'high_voltage'
+
+gem 'simple_form'
+
+gem 'google_drive'
+
+gem "activerecord-tableless", "~> 1.0"
+
+gem 'gibbon'
+
+gem 'devise'
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 

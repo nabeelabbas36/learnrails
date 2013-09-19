@@ -1,6 +1,5 @@
 Nabeel::Application.routes.draw do
-
-  devise_for :users
-resources :contacts, only: [:new, :create]
-root to: 'visitors#new'
-end
+ devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+ resources :contacts, only: [:new, :create]
+ root to: 'visitors#new'
+ end

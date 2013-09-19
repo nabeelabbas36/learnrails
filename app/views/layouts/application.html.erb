@@ -23,19 +23,28 @@ yield(:description) : "Nabeel" %>">
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
+    Signed in as <%= current_user.username %>. Not you?
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
   <% end %>
-</div>
-
+    </div>
+    <div>
+      <% if user_signed_in? && current_user.admin? %>
+   <%= link_to 'Contact', new_contact_path %>
+<% else %>
+   <li><%= link_to 'About', page_path('about') %>
+<% end %>
+    </div>
+    
 
 <div class="container">
 <div class="content">
 <div class="row">
+  <%= render 'layouts/navigation' %>  
 <div class="span12">
 <%= render 'layouts/messages' %>
+
 <%= yield %>
 </div>
 </div>

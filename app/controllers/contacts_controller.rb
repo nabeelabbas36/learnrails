@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show,:index]
 def new
 @contact = Contact.new
 end
